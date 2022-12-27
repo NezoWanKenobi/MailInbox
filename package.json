@@ -1,0 +1,20 @@
+{
+  "name": "mailinbox",
+  "version": "1.0.0",
+  "description": "a home assignment project with using nodejs, mongodb, reactjs ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NezoWanKenobi/MailInbox.git"
+  },
+  "author": "Nezircan Günaydın",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NezoWanKenobi/MailInbox/issues"
+  },
+  "homepage": "https://github.com/NezoWanKenobi/MailInbox#readme"
+}
