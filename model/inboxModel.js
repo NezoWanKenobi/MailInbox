@@ -11,7 +11,7 @@ const inboxSchema = mongoose.Schema({
     isread:{
         type:Boolean,required:true
     },
-    createdBy:{
+    messageTo:{
         type:String
     },
 },{timestamps:true});

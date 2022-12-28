@@ -6,7 +6,7 @@ module.exports = async(req, res)  => {
         subject:req.body.subject,
         content:req.body.content,
         isread: req.body.isread,
-        createdBy: req.user.username
+        messageTo: req.body.messageTo
     });
 
     inbox = await inboxData.save().catch((err) => {
