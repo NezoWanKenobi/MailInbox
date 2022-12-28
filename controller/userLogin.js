@@ -1,6 +1,7 @@
 const bcryt = require('bcryptjs')
 
 const userModel = require('../model/userModel');
+const jwt = require('../utils/jwtHelper');
 
 module.exports = async(req, res)  => {
     const user = await userModel.User.findOne({username:req.body.username.trim()})
@@ -19,6 +20,9 @@ module.exports = async(req, res)  => {
         return res
             .status(400)
             .send({ message : "You have entered an invald email or password"})
+    
+    const authorization =  jwt.signAccessToken(user.username);
 
-    return res.status(200).send(user)
+    return res.status(200).send(authorization);
+
 }
