@@ -14,7 +14,7 @@ module.exports = async(req, res)  => {
 
     user = await user.save().catch((err) => {
         return res
-            .status(500).json(err.message,"An interval server error while registering you.")
+            .status(500).send({message: err})
     });
 
 
