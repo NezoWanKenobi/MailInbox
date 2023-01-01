@@ -23,6 +23,7 @@ module.exports = async(req, res)  => {
     
     const authorization =  jwt.signAccessToken(user.username);
 
-    return res.status(200).send(authorization);
+    return res.status(200).send({"status":"success", "token":authorization});
+
 
 }

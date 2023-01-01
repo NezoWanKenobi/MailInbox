@@ -12,11 +12,11 @@ module.exports = async(req, res)  => {
         username: req.body.username
     });
 
-    user = await user.save().catch((err) => {
-        return res
-            .status(500).send({message: err})
-    });
+    try {
+        await user.save();
+        return res.status(200).send({message : "User registered successfully!"});
+    }catch (err){
+        return res.status(500).send({message: "Email already exist!"})
+    }
 
-
-    return res.status(200).send({message : "User registered successfully!"});
 }

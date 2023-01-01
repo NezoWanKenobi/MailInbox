@@ -18,6 +18,6 @@ module.exports = async (req, res, next) => {
    
       next();
     } catch (err) {
-      res.status(401).send('Please authenticate');
+      res.status(401).send({message:'Please authenticate'});
     }
 };

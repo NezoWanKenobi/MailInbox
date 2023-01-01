@@ -8,3 +8,4 @@ module.exports = async (req,res) => {
         res.status(500).send("Server error");
     }
 }
+
