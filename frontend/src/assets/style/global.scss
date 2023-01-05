@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar-track {
+  @apply bg-white rounded-xl;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-700;
+}
+
+.dropdown {
+  @apply relative inline-block;
+}
+
+.dropdown-button {
+  @apply flex items-center lg:justify-center lg:w-full;
+}
+
+.dropdown-content {
+  @apply transition-all invisible opacity-0 translate-y-0 group-focus-within:translate-y-3 group-focus-within:visible group-focus-within:opacity-100 duration-200 flex flex-col shadow-lg top-[80%] sm:top-[100%] transform overflow-hidden md:right-[0px] right-[25px] absolute bg-white min-w-[200px] z-10 rounded-lg;
+  a, button, p {
+    @apply px-4 py-3 pl-6 hover:bg-gray-100 cursor-pointer whitespace-nowrap transition-colors;
+  }
+}
+
+.inbox {
+  @apply overflow-hidden bg-white shadow sm:rounded-lg w-1/2;
+
+  &__mails {
+    @apply border-t border-gray-200;
+
+    &--list {
+
+      &--item {
+        &:nth-child(odd) {
+          @apply bg-gray-50 hover:bg-gray-100 transition-colors px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6;
+        }
+
+        &:nth-child(even) {
+          @apply bg-white hover:bg-gray-100 transition-colors px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6;
+        }
+      }
+
+    }
+  }
+}

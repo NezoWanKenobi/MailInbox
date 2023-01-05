@@ -9,6 +9,6 @@ const checkJwt = require('../middleware/checkJwt');
 
 router.post("/create", checkJwt, inboxCreate)
 router.get("/:title", checkJwt, inboxGetOne)
-router.get("/all/test", checkJwt, inboxGet)
+router.get("/all/:user", checkJwt, inboxGet)
 
 module.exports = router;
